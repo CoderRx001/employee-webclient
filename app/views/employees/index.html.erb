@@ -1,6 +1,8 @@
 <h1>Employees</h1>
 
+<%= link_to "New Employee", "/employees/new" %>
+
 <% @employees.each do |employee| %>
-  <h2><a href="/employees/<%= employee["id"] %>"><%= employee["full_name"] %></h2>
+  <h2><a href="/employees/<%= employee.id %>"><%= "#{employee.first_name} #{employee.last_name}" %></h2>
   <br>
 <% end %>
